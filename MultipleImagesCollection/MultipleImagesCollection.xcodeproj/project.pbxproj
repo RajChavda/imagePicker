@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		17106AD922F9354600180451 /* DatabaseVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17106AD822F9354600180451 /* DatabaseVC.swift */; };
+		17106AEC22F936A400180451 /* Database.m in Sources */ = {isa = PBXBuildFile; fileRef = 17106AEB22F936A400180451 /* Database.m */; };
+		17106AEE22F9375600180451 /* Utilies.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17106AED22F9375600180451 /* Utilies.swift */; };
+		17106AF022F93B0000180451 /* tempDB in Resources */ = {isa = PBXBuildFile; fileRef = 17106AEF22F9388F00180451 /* tempDB */; };
 		176A133322F867E800F4723B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 176A133222F867E800F4723B /* AppDelegate.swift */; };
 		176A133522F867E800F4723B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 176A133422F867E800F4723B /* ViewController.swift */; };
 		176A133822F867E800F4723B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 176A133622F867E800F4723B /* Main.storyboard */; };
@@ -16,6 +20,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		17106AD822F9354600180451 /* DatabaseVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseVC.swift; sourceTree = "<group>"; };
+		17106AE922F936A300180451 /* MultipleImagesCollection-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MultipleImagesCollection-Bridging-Header.h"; sourceTree = "<group>"; };
+		17106AEA22F936A300180451 /* Database.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Database.h; sourceTree = "<group>"; };
+		17106AEB22F936A400180451 /* Database.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Database.m; sourceTree = "<group>"; };
+		17106AED22F9375600180451 /* Utilies.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilies.swift; sourceTree = "<group>"; };
+		17106AEF22F9388F00180451 /* tempDB */ = {isa = PBXFileReference; lastKnownFileType = file; path = tempDB; sourceTree = "<group>"; };
 		176A132F22F867E800F4723B /* MultipleImagesCollection.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MultipleImagesCollection.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		176A133222F867E800F4723B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		176A133422F867E800F4723B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -61,12 +71,18 @@
 		176A133122F867E800F4723B /* MultipleImagesCollection */ = {
 			isa = PBXGroup;
 			children = (
+				17106AEA22F936A300180451 /* Database.h */,
+				17106AEB22F936A400180451 /* Database.m */,
+				17106AEF22F9388F00180451 /* tempDB */,
 				176A133222F867E800F4723B /* AppDelegate.swift */,
 				176A133422F867E800F4723B /* ViewController.swift */,
 				176A133622F867E800F4723B /* Main.storyboard */,
 				176A133922F867EB00F4723B /* Assets.xcassets */,
 				176A133B22F867EB00F4723B /* LaunchScreen.storyboard */,
 				176A133E22F867EB00F4723B /* Info.plist */,
+				17106AD822F9354600180451 /* DatabaseVC.swift */,
+				17106AE922F936A300180451 /* MultipleImagesCollection-Bridging-Header.h */,
+				17106AED22F9375600180451 /* Utilies.swift */,
 			);
 			path = MultipleImagesCollection;
 			sourceTree = "<group>";
@@ -77,7 +93,6 @@
 				F2E70BEBC7403C49C633B6A3 /* Pods-MultipleImagesCollection.debug.xcconfig */,
 				FF64EC7FE0754878EC192A27 /* Pods-MultipleImagesCollection.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -123,6 +138,7 @@
 				TargetAttributes = {
 					176A132E22F867E800F4723B = {
 						CreatedOnToolsVersion = 10.3;
+						LastSwiftMigration = 1030;
 					};
 				};
 			};
@@ -151,6 +167,7 @@
 			files = (
 				176A133D22F867EB00F4723B /* LaunchScreen.storyboard in Resources */,
 				176A133A22F867EB00F4723B /* Assets.xcassets in Resources */,
+				17106AF022F93B0000180451 /* tempDB in Resources */,
 				176A133822F867E800F4723B /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -214,6 +231,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				176A133522F867E800F4723B /* ViewController.swift in Sources */,
+				17106AD922F9354600180451 /* DatabaseVC.swift in Sources */,
+				17106AEE22F9375600180451 /* Utilies.swift in Sources */,
+				17106AEC22F936A400180451 /* Database.m in Sources */,
 				176A133322F867E800F4723B /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -361,6 +381,7 @@
 			baseConfigurationReference = F2E70BEBC7403C49C633B6A3 /* Pods-MultipleImagesCollection.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = EAKCUU8UT3;
 				INFOPLIST_FILE = MultipleImagesCollection/Info.plist;
@@ -370,6 +391,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.test.MultipleImagesCollection;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "MultipleImagesCollection/MultipleImagesCollection-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -380,6 +403,7 @@
 			baseConfigurationReference = FF64EC7FE0754878EC192A27 /* Pods-MultipleImagesCollection.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = EAKCUU8UT3;
 				INFOPLIST_FILE = MultipleImagesCollection/Info.plist;
@@ -389,6 +413,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.test.MultipleImagesCollection;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "MultipleImagesCollection/MultipleImagesCollection-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

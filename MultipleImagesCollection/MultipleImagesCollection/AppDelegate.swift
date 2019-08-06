@@ -16,6 +16,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+
+        // ****************** DatabaseConfiguration
+        obj_database = Database.share()
+        obj_database.createEditableCopyOfDatabaseIfNeeded()
+
         return true
     }
 

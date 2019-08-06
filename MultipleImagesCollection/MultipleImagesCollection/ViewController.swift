@@ -11,7 +11,7 @@ import UIKit
 import Photos
 import BSImagePicker
 
-class ViewController: UIViewController , NSURLSessionDelegate, NSURLSessionTaskDelegate, NSURLSessionDataDelegate {
+class ViewController: UIViewController , URLSessionDelegate, URLSessionTaskDelegate, URLSessionDataDelegate {
 
     @IBOutlet weak var imgView : UIImageView!
     var SelectedAssests = [PHAsset]()
@@ -80,11 +80,19 @@ class ViewController: UIViewController , NSURLSessionDelegate, NSURLSessionTaskD
         request.httpMethod = "POST"
         request.setValue("Keep-Alive", forHTTPHeaderField: "Connection")
 
-        let config = URLSessionConfiguration.default
-        let session = URLSession(configuration: config)
+//        let config = URLSessionConfiguration.default
+//        let session = URLSession(configuration: config)
 
-        let task = session.uploadTask(with: request as URLRequest, from: imageData)
-        task.resume()
+//        let task = session.dataTask(with: urlRequest) { (data, response, error) in
+//            if let error = error {
+//                print("Api Error: \(error.localizedDescription)")
+//                return
+//            }
+
+
+
+//        let task = session.uploadTask(with: request as URLRequest, from: imageData)
+//        task.resume()
     }
 
     private func URLSession(session: URLSession, task: URLSessionTask, didCompleteWithError error: NSError?)
@@ -112,5 +120,10 @@ class ViewController: UIViewController , NSURLSessionDelegate, NSURLSessionTaskD
 //        self.uploadButton.isEnabled = true
     }
 
+    @IBAction func btn_databasePressed(sender: UIButton!)
+    {
+        let story = storyboard?.instantiateViewController(withIdentifier: "DatabaseVC") as! DatabaseVC
+        self.navigationController?.pushViewController(story, animated: true)
+    }
 }
 
