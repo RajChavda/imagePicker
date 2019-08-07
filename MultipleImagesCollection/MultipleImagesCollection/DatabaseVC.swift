@@ -10,6 +10,10 @@ import UIKit
 
 class DatabaseVC: UIViewController {
 
+    @IBOutlet weak var img_tempView : UIImageView!
+    var originalString : String! = "https://i5.walmartimages.ca /images/Large/ 094/5 14/6000200094514.jpg"
+
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -30,8 +34,14 @@ class DatabaseVC: UIViewController {
         let str_sqlUpdate = NSString(format: "UPDATE tbl_contact SET ContactNo = 9586475734 WHERE email = 'rajchavda2511@gmail.com'") as String
         Database.share()?.update(str_sqlUpdate)
         self.perform(#selector(self.getData), with: nil, afterDelay: 1.0)
+        self.perform(#selector(self.setImageWithSpace), with: nil, afterDelay: 1.0)
     }
 
+    @objc func setImageWithSpace() {
+        let urlString = originalString.removeWhitespace().addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)
+        let url = URL(string: (urlString!))
+        img_tempView.sd_setImage(with: url, completed: block_image)
+    }
     /*
     // MARK: - Navigation
 
